@@ -1,15 +1,18 @@
 import unittest
-from httprequests.views import do_things
+from httprequests.views import square_num
 
-class TestMyStuff(unittest.TestCase):
+class SmokeTests(unittest.TestCase):
 
-    def test_the_obvious(self):
+    def test_truthiness(self):
         self.assertEqual(True, True)
+    
+    def test_maths(self):
+        self.assertEqual(2+2, 4)
 
 class TestMyStuff2(unittest.TestCase):
 
-    def test_maths(self):
-        self.assertEqual(do_things(), "Do")
+    def test_function(self):
+        self.assertEqual(square_num(4), 16)
 
 if __name__ == '__main__':
     unittest.main()
