@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def do_things():
-    return "Do"
+def square_num(num):
+    return num**2
 
 class Avatar:
     def __init__(self, name):
