@@ -1,4 +1,5 @@
 import unittest
+from httprequests.views import do_things
 
 class TestMyStuff(unittest.TestCase):
 
@@ -8,7 +9,7 @@ class TestMyStuff(unittest.TestCase):
 class TestMyStuff2(unittest.TestCase):
 
     def test_maths(self):
-        self.assertEqual(2+2, 4)
+        self.assertEqual(do_things(), "Do")
 
 if __name__ == '__main__':
     unittest.main()
