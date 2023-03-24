@@ -5,9 +5,17 @@ from django.shortcuts import render
 def do_things():
     return "Do"
 
+class Avatar:
+    def __init__(self, name):
+        self.name = name
+    def __str__(self):
+        return self.name + 'lalala'
+
 def home(request):
     return render(request, 'httprequests/home.html')
 
 def hello(request):
     the_name = request.GET.get('name')
-    return render(request, 'httprequests/hello.html', {'name':the_name})
+    the_number = request.GET.get('number')
+    ava = Avatar(the_name)
+    return render(request, 'httprequests/hello.html', {'name':the_name, 'number':the_number})
