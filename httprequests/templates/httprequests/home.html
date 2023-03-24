@@ -3,7 +3,7 @@
 <div class="container text-center">
     <h1 class="text-success">Welcome my first Django web site!</h1>
         <form action="{% url 'hello' %}">
-            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter your name" name="name">
             <input type="submit" value="Say hello" class="btn btn-primary">
         </form>
 </div>

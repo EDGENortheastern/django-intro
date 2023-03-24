@@ -7,4 +7,5 @@ def home(request):
     return render(request, 'httprequests/home.html')
 
 def hello(request):
-    return HttpResponse('<h1 style="color:blue;">hello lalalalala</h1>')
+    the_name = request.GET.get('name')
+    return render(request, 'httprequests/hello.html', {'name':the_name})
